@@ -77,14 +77,17 @@ const Teams = () => {
   }, []);
 
   return (
-    <div className="teams-section">
-      <div className="banner">
-        <div className="slider" style={{ "--quantity": imageList.length }}>
-          {imageList.map((img, idx) => (
-            <div className="item" key={idx} style={{ "--position": idx + 1 }}>
-              <img src={`/images-teams/${img}`} alt={`Team Member ${idx + 1}`} />
-            </div>
-          ))}
+    <div className="teams-wrapper">
+      <h2 className="teams-heading">OUR TEAM</h2>
+      <div className="teams-section">
+        <div className="banner">
+          <div className="slider" style={{ "--quantity": imageList.length }}>
+            {imageList.map((img, idx) => (
+              <div className="item" key={idx} style={{ "--position": idx + 1 }}>
+                <img src={`/images-teams/${img}`} alt={`Team Member ${idx + 1}`} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
