@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.foot {
+  background:
+    url("https://www.transparenttextures.com/patterns/stardust.png"),
+    linear-gradient(270deg, #000000, #0e273b, #000000);
+  background-blend-mode: lighten;
+  background-size: auto, 600% 600%;
+  animation: gradientMove 10s ease infinite;
+  width: 100%;
+  padding: 1.2rem 0.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-dev-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.dev-label {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.04em;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+
+.bottom {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin-top: 0.625rem;
+}
+
+.bottom ul li {
+  border: 0.125rem solid white;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  list-style: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom ul li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 0%;
+  background: linear-gradient(270deg, #004e92, #000, #004e92);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.8s ease, height 0.8s ease;
+  z-index: -1;
+}
+
+.bottom ul li:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+.bottom ul li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.6s ease;
+}
+
+.bottom ul li:hover a {
+  color: white;
+}
+
+.same {
+  flex: 1 1 18rem;
+  max-width: 20rem;
+  min-width: 16rem;
+  height: auto;
+  margin: 1rem;
+}
+
+.one img {
+  height: auto;
+  width: 100%;
+  max-width: 15.625rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.underline {
+  margin-top: 0.3rem;
+  width: 100%;
+  max-width: 90%;
+  height: 0.375rem;
+  background-color: #767676;
+  border-radius: 0.1875rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.underline span {
+  width: 0.625rem;
+  height: 100%;
+  display: inline-block;
+  background-color: white;
+  border-radius: 0.125rem;
+  position: absolute;
+  left: 0;
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+  0% { left: -0.625rem; }
+  100% { left: 100%; }
+}
+
+.four form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9375rem;
+  margin: 1rem 0;
+  border-bottom: 0.125rem solid white;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.enve {
+  font-size: 1.125rem;
+  margin-right: 1.25rem;
+  color: white;
+}
+
+.four form input {
+  border: 0;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.3rem;
+}
+
+.four form button {
+  background: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.3rem;
+}
+
+.arrow {
+  margin-right: 0;
+  color: white;
+  font-size: 1rem;
+}
+
+.four {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  width: 70%;
+  background-color: white;
+  border-radius: 0.125rem;
+  margin: 0.8rem 0;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 1.5625rem;
+  right: 1.5625rem;
+  display: none;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.875rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.5s ease;
+}
+
+#scrollTopBtn img:hover {
+  opacity: 1;
+}
+
+#scrollTopBtn.fly {
+  animation: flyUpFlipY 0.8s forwards ease-in;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+@keyframes flyUpFlipY {
+  0% {
+    bottom: 1.5625rem;
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+    transform: rotateY(720deg) scale(0.2);
+  }
+}
+
+#robo {
+  height: 6.25rem;
+  width: 6.25rem;
+  opacity: 1;
+}
+
+/* Updated Contact Section */
+.three.same {
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-entries {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.phone-separator {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-name {
+  white-space: nowrap;
+}
+
+.phone i, .email-entry i {
+  color: #e75480;
+  margin-right: 0.3rem;
+}
+
+.email-entry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: transparent;
+  margin: 1.2rem 0 0.5rem 0;
+  position: relative;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-scroll 24s linear infinite;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.dev-name {
+  display: inline-block;
+  margin: 0 0.5em 0 0.3em;
+  padding: 0.15em 1em;
+  border-radius: 1.2em;
+  border: 2px solid #004e92;
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dev-name:hover, .dev-name:active, .dev-name:visited {
+  text-decoration: none;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .same {
+    flex: 1 1 90%;
+    max-width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .four form {
+    margin: 0.625rem 0;
+    flex-direction: column;
+    gap: 0.625rem;
+    align-items: stretch;
+  }
+
+  .four form input {
+    text-align: center;
+  }
+
+  .one img {
+    max-width: 10rem;
+  }
+
+  .bottom {
+    margin-top: 0.7rem;
+  }
+
+  .bottom ul li {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 0.4rem;
+  }
+
+  .footer-dev-section {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+
+  .marquee {
+    height: 2em;
+    margin: 0.7rem 0 0.2rem 0;
+  }
+
+  .marquee-content {
+    font-size: 0.95em;
+  }
+
+  .dev-name {
+    font-size: 0.9em;
+    padding: 0.08em 0.5em;
+    margin: 0 0.3em 0 0.2em;
+  }
+
+  #robo {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  .contact-entry, .email-entry {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0.05rem 0.01rem !important;
+    margin: 0 auto !important;
+    max-width: 98vw !important;
+  }
+
+  .same {
+    font-size: 0.85em;
+    margin: 0.07rem 0 0.12rem 0;
+    text-align: center;
+    width: 100% !important;
+  }
+
+  h3 {
+    font-size: 1.08rem;
+    margin-bottom: 0.15em;
+    margin-top: 0.2em;
+  }
+
+  .bottom ul li {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: 0.09rem;
+  }
+
+  .marquee {
+    height: 1.1em;
+    margin: 0.05rem 0 0.02rem 0;
+  }
+
+  .marquee-content {
+    font-size: 0.8em;
+  }
+
+  .dev-name {
+    font-size: 0.75em;
+    padding: 0.01em 0.05em;
+    margin: 0 0.05em 0 0.03em;
+    border: none !important;
+    background: none !important;
+    color: #fff !important;
+  }
+
+  #robo {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+
+  .contact-entry {
+    flex-direction: column;
+    gap: 0.1rem;
+    font-size: 0.8rem;
+  }
+
+  .phone-separator {
+    display: none;
+  }
+}
