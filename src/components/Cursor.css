@@ -1,0 +1,68 @@
+body {
+    cursor: none;
+  }
+  
+  .custom-cursor {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .nucleus {
+    width: 10px;
+    height: 10px;
+    background: #4C75FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    box-shadow: 0 0 8px #4C75FF;
+  }
+  
+  .orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .electron {
+    width: 8px;
+    height: 8px;
+    background: #4C75FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 6px #4C75FF;
+  }
+  
+  .orbit1 {
+    animation: spin1 2s linear infinite;
+  }
+  .orbit2 {
+    animation: spin2 3s linear infinite;
+  }
+  .orbit3 {
+    animation: spin3 4s linear infinite;
+  }
+  
+  @keyframes spin1 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes spin2 {
+    0% { transform: rotate(120deg); }
+    100% { transform: rotate(480deg); }
+  }
+  
+  @keyframes spin3 {
+    0% { transform: rotate(240deg); }
+    100% { transform: rotate(600deg); }
+  }
+  

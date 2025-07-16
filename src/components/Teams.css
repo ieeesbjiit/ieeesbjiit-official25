@@ -5,9 +5,10 @@
   align-items: center;
   justify-content: flex-start;
   padding-top: 4rem;
-  background: rgba(0,0,0,.5); 
-  min-height: 100vh;
-  position: relative;
+  background: transparent;
+  margin-top: 3rem;
+  /* min-height: 100vh;
+  position: relative; */
 }
 
 .teams-heading {
@@ -15,7 +16,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   margin-bottom: 2rem;
   color: #f0f0f0;
@@ -25,12 +26,12 @@
 @media screen and (max-width: 767px) {
   .teams-heading {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 .teams-section {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -94,33 +95,33 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .teams-heading {
+    font-size: 4rem;
+  }
+  .banner {
+    height: 120vh;
+  }
+
   .banner .slider {
-    width: 120px;
-    height: 160px;
-    left: calc(50% - 60px);
+    width: 125px;
+    height: 120px;
+    left: calc(50% - 50px);
   }
   .banner .slider .item {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(320px);
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(380px);
   }
-  .banner .slider .item.visible:hover {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(340px) scale(0.95);
+  .banner .slider .item.touched {
+  transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px) scale(1.05);
+  z-index: 10;
   }
 }
-
 @media screen and (max-width: 767px) {
-  .banner .slider {
-    width: 80px;
-    height: 110px;
-    left: calc(50% - 40px);
+  .teams-heading {
+    font-size: 2.8rem;
   }
-  .banner .slider .item {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(190px);
-  }
-  .banner .slider .item.visible:hover {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(210px) scale(0.95);
+}
+@media screen and (max-width: 450px) {
+  .teams-heading {
+    font-size: 2rem;
   }
 }

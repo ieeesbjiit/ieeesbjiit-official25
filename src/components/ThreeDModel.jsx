@@ -22,7 +22,7 @@
         0.1,
         1000
       );
-      camera.position.z = 30;
+      camera.position.z = 40;
 
       const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -41,7 +41,7 @@
       loader.load("/robot_animation_1.glb", (gltf) => {
         model = gltf.scene;
         model.scale.set(2, 2, 2);
-        model.position.set(9, -6, -6);
+        model.position.set(18, -6, -6);
         scene.add(model);
 
         model.traverse((obj) => {
@@ -113,25 +113,31 @@
   const arrPositionModel = [
     {
       id: "HOME",
-      position: { x: 11, y: -6, z: -6 },
+      position: { x: 18, y: -6, z: -6 },
       rotation: { x: 0, y: 0, z: 0 },
       animation: "Idle",
     },
     {
+      id: "About",
+      position: { x: 29, y: -6, z: -6 },
+      rotation: { x: 0, y: -0.1, z: 0 },
+      animation: "",
+    },
+    {
       id: "Stats",
-      position: { x: 3.5, y: 3, z: -10 },
+      position: { x: 29, y: -6, z: -6 },
       rotation: { x: 0, y: -0.1, z: 0 },
       animation: "Idle",
     },
     {
       id: "GALLERY",
-      position: { x: 20, y: -8, z: -6 },
-      rotation: { x: 0.2, y: -0.2, z: 0 },
+      position: { x: 29, y: -6, z: -6 },
+      rotation: { x: 0, y: -0.5, z: 0 },
       animation: "Excited",
     },
     {
       id: "WIE",
-      position: { x: 15, y: -8, z: -3 },
+      position: { x: 29, y: -6, z: -6 },
       rotation: { x: 0.2, y: 0.1, z: 0 },
       animation: "Dance2",
     },
@@ -143,7 +149,7 @@
     },
     {
       id: "EVENTS",
-      position: { x: 15, y: -8, z: -5 },
+      position: { x: 29, y: -6, z: -6 },
       rotation: { x: 0, y: 0.0, z: 0 },
       animation: "Idle",
     },
@@ -181,7 +187,7 @@
             }
           });
         },
-        { threshold: 0.4 }
+        { threshold: 0.8 }
       );
 
       document.querySelectorAll(".section").forEach((section) => {

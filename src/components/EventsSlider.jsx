@@ -15,7 +15,7 @@ const EventsSlider = () => {
       link: "https://www.instagram.com/ieeesbjiit?igsh=MWdyeHQyNDd3OWw5eg=="
     },
     {
-      mainImg: "//big-data-7644538_1280.jpg",
+      mainImg: "/big-data-7644538_1280.jpg",
       hoverImg: "/WhatsApp Image 2025-07-08 at 17.19.06_2ade0cac.jpg",
       title: "Tech Blocks",
       content: "Building the future together",

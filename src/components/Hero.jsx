@@ -8,64 +8,49 @@ const Hero = () => {
   const logoVideoRef = useRef(null);
 
   useEffect(() => {
-    // Force videos to play immediately when component mounts
     const playVideos = async () => {
       try {
-        if (bgVideoRef.current) {
-          bgVideoRef.current.currentTime = 0;
-          await bgVideoRef.current.play();
-        }
-        if (logoVideoRef.current) {
-          logoVideoRef.current.currentTime = 0;
-          await logoVideoRef.current.play();
-        }
+        await bgVideoRef.current?.play();
+        await logoVideoRef.current?.play();
       } catch (error) {
         console.log('Video autoplay failed:', error);
       }
     };
-
     playVideos();
   }, []);
 
   return (
-    <div className="hero-section section" id="hero">
-      <div className="video-wrapper" id="hero">
-        <video 
-          ref={bgVideoRef}
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          preload="auto"
-          className="bg-video"
-        >
+    <div className="hero-section" id="hero">
+      <div className="video-wrapper">
+        <video ref={bgVideoRef} autoPlay muted loop playsInline className="bg-video">
           <source src={bgVideo} type="video/mp4" />
         </video>
         <div className="overlay"></div>
       </div>
 
       <div className="hero-content">
-        <div className="container">
+        <div className="hero-inner">
           <div className="ieee-logo-block">
-            <div className="ieee-line animate-fade-in-up delay-300"></div>
+            <div className="ieee-line"></div>
             <div>
-              <span className="ieee-text-main animate-fade-in-up delay-400">IEEE</span>
-              <video 
-                ref={logoVideoRef}
-                className="ieee-video animate-fade-in delay-500" 
-                autoPlay 
-                muted 
-                loop 
-                playsInline
-                preload="auto"
-              >
-                <source src={logoVideo} type="video/webm" />
-              </video>
-              <div className="ieee-text-sub animate-fade-in-up delay-500">STUDENT BRANCH JIIT</div>
+              <div className="ieee-text-container">
+                <span className="ieee-text-main">IEEE</span>
+                <video 
+                  ref={logoVideoRef}
+                  className="ieee-video" 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline
+                >
+                  <source src={logoVideo} type="video/webm" />
+                </video>
+              </div>
+              <div className="ieee-text-sub">STUDENT BRANCH JIIT</div>
             </div>
           </div>
 
-          <h1 className="hero-heading animate-fade-in-up delay-600">
+          <h1 className="hero-heading">
             <span className="no-break">Advancing Technology for</span><br />
             <span className="highlight">Humanity</span>
           </h1>

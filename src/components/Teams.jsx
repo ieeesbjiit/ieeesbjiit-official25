@@ -64,7 +64,29 @@ const Teams = () => {
       item.addEventListener("click", () => {
         setIsStopped(true);
       });
+
+      // Pause on touch (for mobile)
+      item.addEventListener("touchstart", () => {
+        setIsStopped(true);
+
+    // Remove touched class from all items
+    items.forEach((el) => el.classList.remove("touched"));
+    // Add "touched" to this one
+    item.classList.add("touched");
+  }, { passive: true });
     });
+    //  Resume when tapping/clicking anywhere else
+  const handleResume = (e) => {
+    if (!slider.contains(e.target)) {
+      setIsStopped(false);
+      // Remove popped
+    items.forEach((el) => el.classList.remove("touched"));
+    }
+  };
+
+  document.addEventListener("click", handleResume);
+  document.addEventListener("touchstart", handleResume, { passive: true });
+
 
     return () => clearInterval(interval);
   }, []);
@@ -83,7 +105,7 @@ const Teams = () => {
 
   return (
     <div className="teams-wrapper">
-      <h2 className="teams-heading">OUR TEAM</h2>
+      <h2 className="teams-heading">MEET OUR TEAM</h2>
       <div className="teams-section">
         <div className="banner">
           <div

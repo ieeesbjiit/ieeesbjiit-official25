@@ -4,13 +4,39 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Gallery = () => {
   const slideRef = useRef(null);
+  const containerRef = useRef(null);
+  const lidRef = useRef(null);
 
   useEffect(() => {
-    const container = document.getElementById("carousel-container");
-    setTimeout(() => {
-      if (container) container.style.display = "block";
-    }, 1500);
-    updatePositions();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (containerRef.current) {
+              containerRef.current.style.display = "block";
+            }
+
+            if (lidRef.current) {
+              requestAnimationFrame(() => {
+                setTimeout(() => {
+                  lidRef.current.style.animation = "openLid 2s ease-out forwards";
+                }, 200); // to change the lid opening delay
+              });
+            }            
+
+            updatePositions();
+
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    const target = document.querySelector(".gallery-wrapper");
+    if (target) observer.observe(target);
+
+    return () => observer.disconnect();
   }, []);
 
   const goNext = () => {
@@ -29,7 +55,7 @@ const Gallery = () => {
 
   const updatePositions = () => {
     const items = slideRef.current.querySelectorAll(".item");
-    items.forEach(item => item.classList.remove("active"));
+    items.forEach((item) => item.classList.remove("active"));
     items[0]?.classList.add("active");
   };
 
@@ -38,7 +64,7 @@ const Gallery = () => {
       <h2 className="gallery-title">Gallery</h2>
 
       <div className="gallery-macbook">
-        <div className="gallery-lid">
+        <div className="gallery-lid" ref={lidRef}>
           <div className="gallery-frame">
             <div className="gallery-screen">
               <div className="gallery-notch"></div>
@@ -46,6 +72,7 @@ const Gallery = () => {
                 <div
                   className="gallery-container"
                   id="carousel-container"
+                  ref={containerRef}
                   style={{ display: "none" }}
                 >
                   <div className="gallery-slide" ref={slideRef}>

@@ -13,6 +13,13 @@
 .wie-section {
   max-width: 1200px;
   margin: auto;
+  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 3rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+  
 }
 
 
@@ -25,11 +32,7 @@
 
 .wie-left, .wie-right {
   flex: 1 1 45%;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 3rem;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+
 }
 
 .wie-left h2, .wie-right h2 {
@@ -41,11 +44,13 @@
 }
 
 .wie-left p {
-  line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #d0d0d0;
 }
-
+.wie-left ul {
+  font-size: 1.2rem;
+  color: #d0d0d0;
+}
 
 .gallery-container {
   position: relative;

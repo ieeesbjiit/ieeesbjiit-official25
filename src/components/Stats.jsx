@@ -36,7 +36,7 @@ const statsData = [
 const Stats = () => {
   useEffect(() => {
     const counters = document.querySelectorAll(".count");
-    const duration = 7000;
+    const duration = 3000;
     const interval = 20;
     const steps = Math.ceil(duration / interval);
 
@@ -82,6 +82,8 @@ const Stats = () => {
   }, []);
 
   return (
+    <div className="stats-wrapper">
+      <h2 className="stats-heading">HIGHLIGHTS FROM THE LAST YEAR</h2>
     <div className="stats-container">
       <div className="card__container">
         {statsData.map((stat, index) => (
@@ -109,6 +111,7 @@ const Stats = () => {
           </article>
         ))}
       </div>
+    </div>
     </div>
   );
 };

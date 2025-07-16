@@ -2,17 +2,63 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 5rem;
   background-color: transparent;
+  padding-block: 5rem;
 }
 
-.card__container {
+.stats-heading {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  color: #f0f0f0;
+  text-shadow: 0 0 15px #7f00ff;
+}
+
+/* ✅ Responsive Grid with control */
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  flex-wrap: wrap;
   padding: 1rem;
+}
+
+/* 🔁 Adjust for 2x2 layout on small devices */
+@media (max-width: 1077px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  .stats-heading {
+    font-size: 3rem;
+  }
+
+  .card__article {
+    max-width: 300px;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .number {
+    font-size: 2.5rem;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .stats-heading {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
 }
 
 .card__article {
@@ -22,7 +68,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 1rem;
-  width: clamp(280px, 30vw, 400px);
+  width: 100%;
   height: clamp(400px, 55vh, 500px);
   overflow: hidden;
   padding: 4rem 2rem 2rem;
@@ -41,7 +87,6 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-
   filter: blur(10px) brightness(0.5) grayscale(1);
   transform: scale(1.15);
   transition: all 0.4s ease;
@@ -51,7 +96,6 @@
   filter: blur(0px) brightness(1) grayscale(0);
   transform: scale(1);
 }
-
 
 .card {
   z-index: 1;
@@ -74,4 +118,34 @@
   font-size: 1.3rem;
   margin-top: 0.5rem;
   color: #cbd5e1;
+}
+
+@media (max-width: 450px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .stats-heading {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card__article {
+    width: 100%;
+    max-width: 160px;
+    height: 240px;
+    padding: 1.5rem 1rem;
+    border-radius: 0.8rem;
+  }
+
+  .number {
+    font-size: 1.8rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+  }
 }

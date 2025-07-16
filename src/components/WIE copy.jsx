@@ -73,24 +73,21 @@ useEffect(() => {
 
       <div className="wie-content">
         <div className="wie-left">
-          {/* <h2>About WIE</h2> */}
+          <h2>About WIE</h2>
           <p>
-      The Women in Engineering (WIE) Affinity Group at IEEE SB JIIT is dedicated to promoting the involvement
-      and success of women in engineering and technology. Through our various initiatives, events, and programs,
-      we aim to encourage professional growth, networking, and collaboration among women engineers. By fostering
-      a supportive community, WIE at IEEE SB JIIT envisions a future where women and men collaborate to drive
-      technological innovation for societal benefit.
-    </p>
-     <br />
-    <ul>
-      <li>Provide assistance with the formation of new IEEE WIE Affinity Groups and support ongoing activities.</li>
-      <li>Promote member grade advancement for women to the IEEE membership grades of Senior Member and Fellow.</li>
-      <li>Advocate women in leadership roles in IEEE governance and career advancement for women in the profession.</li>
-    </ul>
+            The Women in Engineering (WIE) Affinity Group at IEEE SB JIIT is dedicated to promoting the involvement
+            and success of women in engineering and technology. Through our various initiatives, events, and programs,
+            we aim to encourage professional growth, networking, and collaboration among women engineers. By fostering
+            a supportive community, WIE at IEEE SB JIIT envisions a future where women and men collaborate to drive
+            technological innovation for societal benefit. Provide assistance with the formation of new IEEE WIE
+            Affinity Groups and support ongoing activities. Promote member grade advancement for women to the IEEE
+            membership grades of Senior Member and Fellow. Advocate women in leadership roles in IEEE governance and
+            career advancement for women in the profession.
+          </p>
         </div>
 
         <div className="wie-right">
-          <h2> </h2>
+          <h2>Our Events</h2>
           <div className="gallery-container">
             <div className="slider" ref={sliderRef} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
               {galleryImages.map((img, index) => (
