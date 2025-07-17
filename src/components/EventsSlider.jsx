@@ -12,7 +12,7 @@ const EventsSlider = () => {
       hoverImg: "/278973277_5040470592655073_248035920281809986_n.jpg",
       title: "IEEE Day",
       content: "Celebrating technology innovation",
-      link: "https://www.instagram.com/ieeesbjiit?igsh=MWdyeHQyNDd3OWw5eg=="
+      link: "https://www.instagram.com/p/DApr7u2hmup/?igsh=MWcwYnd5YTN2bmx6dQ=="
     },
     {
       mainImg: "/big-data-7644538_1280.jpg",
