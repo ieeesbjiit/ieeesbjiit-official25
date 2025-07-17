@@ -10,7 +10,7 @@
   min-height: 40vh;
   width: 100vw;
   padding-top: 0;
-  padding-bottom: 5vh;
+  padding-bottom: 12vh;
 }
 
 /* Title */
@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-align: center;
   margin-bottom: 4rem;
   color: #f0f0f0;

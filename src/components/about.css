@@ -38,6 +38,7 @@
 #about {
   color: white;
   text-shadow: 0 0 15px #7f00ff;
+  font-size: 4rem;
 }
 
 #us {
@@ -87,6 +88,8 @@
 }
 
 @media (max-width: 450px) {
+
+  
   .about-us-container {
     font-size: 1.5rem;
   }

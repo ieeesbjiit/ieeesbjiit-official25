@@ -7,8 +7,7 @@ const About = () => {
       <div className="aboutus-container">
         <div className="about-section">
           <div className="about-us-container">
-            <span id="about">ABOUT </span>
-            <span id="us">IEEE SB JIIT</span>
+            <span id="about">ABOUT IEEE SB JIIT </span>
           </div>
           <div className="full-width-line"></div>
         </div>

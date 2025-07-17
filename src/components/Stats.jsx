@@ -21,7 +21,7 @@ const statsData = [
     icon: "bi-people",
     color: "#0d6efd",
     target: 3000,
-    label: "Attendee Count",
+    label: "Attendees Acroos Events",
     img: "attendees.webp",
   },
   {
