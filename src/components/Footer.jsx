@@ -59,11 +59,31 @@ const Footer = () => {
             <span className="phone">
               <i className="fa-solid fa-phone"></i> +91-7905071036
             </span>
+            <span className="linkedin-wrapper">
+             <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/manayav-vatsal-bb0426283/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            </span>
           </div>
           <div className="contact-entry">
             <span className="contact-name">Anoushka Kaushik</span>
             <span className="phone">
               <i className="fa-solid fa-phone"></i> +91-9953193922
+            </span>
+             <span className="linkedin-wrapper">
+            <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/anoushka-kaushik-014290224/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
             </span>
           </div>
           <div className="email-entry">
