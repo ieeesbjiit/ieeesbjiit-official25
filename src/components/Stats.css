@@ -37,6 +37,7 @@
 
   .stats-heading {
     font-size: 3rem;
+    text-shadow: 0 0 15px #7f00ff;
   }
 
   .card__article {
@@ -58,6 +59,7 @@
   .stats-heading {
     font-size: 2rem;
     margin-top: 2rem;
+    text-shadow: 0 0 15px #7f00ff;
   }
 }
 
@@ -131,6 +133,7 @@
     font-size: 2rem;
     margin-top: 5rem;
     margin-bottom: 1rem;
+    text-shadow: 0 0 15px #7f00ff;
   }
 
   .card__article {

@@ -328,6 +328,7 @@
 
   .gallery-title {
     font-size: 3rem;
+    text-shadow: 0 0 15px #7f00ff;
   }
 
   .gallery-macbook {

@@ -197,6 +197,7 @@
   }
   .wie-heading h1 {
     font-size: 2rem;
+    text-shadow: 0 0 15px #7f00ff;
   }
 
   .wie-left, .wie-right {
@@ -234,6 +235,7 @@
 
   .wie-heading h1 {
     font-size: 3rem;
+    text-shadow: 0 0 15px #7f00ff;
   }
 
   .wie-logo {

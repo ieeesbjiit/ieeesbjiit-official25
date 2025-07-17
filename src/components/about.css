@@ -71,6 +71,7 @@
 
   #about{
     font-size: 4rem;
+    text-shadow: 0 0 15px #7f00ff;
   }
 }
 @media (max-width: 768px) {
@@ -92,6 +93,7 @@
 
    #about{
     font-size: 3.5rem;
+    text-shadow: 0 0 15px #7f00ff;
   }
 }
 
@@ -104,5 +106,6 @@
 
   #about{
     font-size: 2rem;
+    text-shadow: 0 0 15px #7f00ff;
   }
 }
