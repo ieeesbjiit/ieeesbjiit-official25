@@ -738,7 +738,7 @@ hr {
     gap: 0.2rem;
     padding: 0.2rem;
     flex-wrap: wrap;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
   }
 
   .dev-name {
@@ -752,8 +752,8 @@ hr {
   }
 
   #scrollTopBtn {
-    top: 43.5rem;
-    left:18.2rem;
+    top: 46rem;
+    left:20rem;
     right:0;
   }
 

@@ -68,6 +68,10 @@
   .about-us-container {
     font-size: 3.8rem;
   }
+
+  #about{
+    font-size: 4rem;
+  }
 }
 @media (max-width: 768px) {
   .about-us-container {
@@ -85,6 +89,10 @@
   .aboutus-container {
     padding: 30px 20px;
   }
+
+   #about{
+    font-size: 3.5rem;
+  }
 }
 
 @media (max-width: 450px) {
@@ -92,5 +100,9 @@
   
   .about-us-container {
     font-size: 1.5rem;
+  }
+
+  #about{
+    font-size: 2rem;
   }
 }
