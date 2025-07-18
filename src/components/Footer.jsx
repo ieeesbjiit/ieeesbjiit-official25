@@ -50,7 +50,7 @@ const Footer = () => {
 
         {/* Contact Us - Centered */}
         <div className="three same center-contact">
-          <h3>
+          <h3 id="contact">
             Contact Us
             <div className="underline"><span></span></div>
           </h3>

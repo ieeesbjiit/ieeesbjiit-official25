@@ -34,7 +34,7 @@ const Navbar = () => {
           <a href="#WIE">WIE</a>
           <a href="#team">Team</a>
           <a href="#GALLERY">Gallery</a>
-          <a href="#Footer">Contact Us</a>
+          <a href="#contact">Contact Us</a>
           
         </nav>
 
